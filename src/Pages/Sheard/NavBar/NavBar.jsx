@@ -1,16 +1,25 @@
-import logo from '../../../assets/logo/logo.jpg'
+import { Link } from "react-router-dom";
+import logo from "../../../assets/logo/logo.jpg";
 const NavBar = () => {
   const navOption = (
     <>
       <li>
-        {" "}
-        <a>Item 1</a>
+        <Link to="/">Home</Link>
       </li>
       <li>
-        <a>Parent</a>
+        <Link to="dashboard">Dashboard</Link>
       </li>
       <li>
-        <a>Item 3</a>
+        <Link>Classes page</Link>
+      </li>
+      <li>
+        <Link>Instructors Page</Link>
+      </li>
+      <li>
+        <Link to="/login">Login</Link>
+      </li>
+      <li>
+        <Link to="/signup">Logout</Link>
       </li>
     </>
   );
@@ -42,10 +51,10 @@ const NavBar = () => {
               {navOption}
             </ul>
           </div>
-         <div className='flex'>
-            <img className='w-16 h-16 rounded' src={logo} alt="" />
-         <a className="btn btn-ghost normal-case text-xl">Royal Drawing</a>
-         </div>
+          <div className="flex">
+            <img className="w-16 h-16 rounded" src={logo} alt="" />
+            <a className="btn btn-ghost normal-case text-xl">Royal Drawing</a>
+          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navOption}</ul>

@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "image": "https://m.media-amazon.com/images/I/81JDUlIjTCL._RI_SX480_FMwebp_.jpg",
+        "name": "John Doe",
+        "email": "johndoe@example.com",
+        "numClassesTaken": 5,
+        "classesTaken": ["Class A", "Class B", "Class C", "Class D", "Class E"]
+      },
+      {
+        "id": 2,
+        "image": "https://m.media-amazon.com/images/I/91WlF5cAa+L._RI_SX480_FMwebp_.jpg",
+        "name": "Mike Johnson",
+        "email": "mikejohnson@example.com",
+        "numClassesTaken": 2,
+        "classesTaken": ["Class M", "Class N"]
+      },
+      {
+        "id": 3,
+        "image": "https://m.media-amazon.com/images/I/71Teou3wlmL._RI_SX480_FMwebp_.jpg",
+        "name": "Mike Johnson",
+        "email": "mikejohnson@example.com",
+        "numClassesTaken": 2,
+        "classesTaken": ["Class M", "Class N"]
+      },
+      {
+        "id": 4,
+        "image": "https://m.media-amazon.com/images/I/81o+uqExlqL._RI_SX480_FMwebp_.jpg",
+        "name": "Sarah Davis",
+        "email": "sarahdavis@example.com",
+        "numClassesTaken": 4,
+        "classesTaken": ["Class P", "Class Q", "Class R", "Class S"]
+      },
+      {
+        "id": 5,
+        "image": "https://m.media-amazon.com/images/I/91WSfm-eXpL._RI_SX480_FMwebp_.jpg",
+        "name": "Alex Brown",
+        "email": "alexbrown@example.com",
+        "numClassesTaken": 1,
+        "classesTaken": ["Class U"]
+      },
+      {
+        "id": 10,
+        "image": "https://m.media-amazon.com/images/I/71C6P0yVrKL._RI_SX480_FMwebp_.jpg",
+        "name": "Emily Wilson",
+        "email": "emilywilson@example.com",
+        "numClassesTaken": 0,
+        "classesTaken": []
+      },
+      {
+        "id": 6,
+        "image": "https://m.media-amazon.com/images/I/8198JOGJ2hL._RI_SX480_FMwebp_.jpg",
+        "name": "David Thompson",
+        "email": "davidthompson@example.com",
+        "numClassesTaken": 6,
+        "classesTaken": ["Class D", "Class E", "Class F", "Class G", "Class H", "Class I"]
+      },
+      {
+        "id": 7,
+        "image": "https://m.media-amazon.com/images/I/918ubBe6MwL._RI_SX480_FMwebp_.jpg",
+        "name": "Olivia Rodriguez",
+        "email": "oliviarodriguez@example.com",
+        "numClassesTaken": 2,
+        "classesTaken": ["Class J", "Class K"]
+      },
+      {
+        "id": 8,
+        "image": "https://m.media-amazon.com/images/I/81Lq-Y-yvQL._RI_SX480_FMwebp_.jpg",
+        "name": "Daniel Lee",
+        "email": "daniellee@example.com",
+        "numClassesTaken": 7,
+        "classesTaken": ["Class L", "Class M", "Class N", "Class O", "Class P", "Class Q", "Class R"]
+      },
+      {
+        "id": 9,
+        "image": "https://m.media-amazon.com/images/I/71iNQkCiOyL._RI_SX480_FMwebp_.jpg",
+        "name": "Sophia Anderson",
+        "email": "sophiaanderson@example.com",
+        "numClassesTaken": 3,
+        "classesTaken": ["Class T", "Class U", "Class V"]
+      }
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+]
