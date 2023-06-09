@@ -6,6 +6,8 @@
 // import { AuthContext } from "../../providers/AuthProvider";
 // import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 
+import { Helmet } from "react-helmet-async";
+
 const SignUp = () => {
 //   const {
 //     register,
@@ -55,8 +57,11 @@ const SignUp = () => {
   return (
     <>
     <h1>This is LogOut Page</h1>
+    <Helmet>
+        <title>Sign Up Page</title>
+      </Helmet>
       {/* <Helmet>
-        <title>Bistro Boss | Sign Up</title>
+        <title>Sign Up Page</title>
       </Helmet>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">

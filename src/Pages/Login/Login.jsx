@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 // import { useContext, useEffect, useState } from "react";
 // import {
 //   loadCaptchaEnginge,
@@ -6,7 +7,7 @@
 // } from "react-simple-captcha";
 // import { AuthContext } from "../../providers/AuthProvider";
 // import { Link, useLocation, useNavigate } from "react-router-dom";
-// import { Helmet } from "react-helmet-async";
+
 // import Swal from "sweetalert2";
 // import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 
@@ -56,9 +57,10 @@ const Login = () => {
   return (
     <>
     <h1>This Login Page</h1>
-      {/* <Helmet>
-        <title>Bistro Boss | Login</title>
-      </Helmet> */}
+    <Helmet>
+      <title>Login Page</title>
+    </Helmet>
+      
       {/* <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col md:flex-row-reverse">
           <div className="text-center md:w-1/2 lg:text-left">

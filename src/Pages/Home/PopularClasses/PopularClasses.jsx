@@ -1,77 +1,49 @@
+import { useEffect, useState } from "react";
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
+import StudentesClass from "../../Sheard/StudentesClass/StudentesClass";
 
 const PopularClasses = () => {
+
+  const [popularInstruct, setPopularInstruct] = useState([]);
+  const [showAll, setShowAll] = useState(false);
+
+  useEffect(() => {
+    fetch('popularClass.json')
+      .then(res => res.json())
+      .then(data => setPopularInstruct(data))
+      .catch(error => console.log(error)); // Add error handling if needed
+  }, []);
+
+  const handleToggleView = () => {
+    setShowAll(!showAll);
+  };
+
+
   return (
-   <section>
+    <section>
     <SectionTitle
-    subHeading={"Online Class"}
-    heading={"Popular Classes"}
+      heading={"Popular Class"}
+      subHeading={"Teaching Online"}
     ></SectionTitle>
-     <div>
-      <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 gap-4 py-4 p-4">
-        <div>
-          <figure>
-            <img
-              src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-              alt="Shoes"
-            />
-          </figure>
-          <h2 className="card-title">Shoes!</h2>
-          <p>If a dog chews shoes, whose shoes does he choose?</p>
-        </div>
-        <div>
-          <figure>
-            <img
-              src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-              alt="Shoes"
-            />
-          </figure>
-          <h2 className="card-title">Shoes!</h2>
-          <p>If a dog chews shoes, whose shoes does he choose?</p>
-        </div>
-        <div>
-          <figure>
-            <img
-              src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-              alt="Shoes"
-            />
-          </figure>
-          <h2 className="card-title">Shoes!</h2>
-          <p>If a dog chews shoes, whose shoes does he choose?</p>
-        </div>
-        <div>
-          <figure>
-            <img
-              src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-              alt="Shoes"
-            />
-          </figure>
-          <h2 className="card-title">Shoes!</h2>
-          <p>If a dog chews shoes, whose shoes does he choose?</p>
-        </div>
-        <div>
-          <figure>
-            <img
-              src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-              alt="Shoes"
-            />
-          </figure>
-          <h2 className="card-title">Shoes!</h2>
-          <p>If a dog chews shoes, whose shoes does he choose?</p>
-        </div>
-        <div>
-          <figure>
-            <img
-              src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-              alt="Shoes"
-            />
-          </figure>
-          <h2 className="card-title">Shoes!</h2>
-          <p>If a dog chews shoes, whose shoes does he choose?</p>
-        </div>
-      </div>
+    <div className="grid md:grid-cols-3 gap-4">
+      {popularInstruct.slice(0, showAll ? popularInstruct.length : 6).map(item => (
+        <StudentesClass key={item.id} item={item}></StudentesClass>
+      ))}
     </div>
-   </section>
+    {showAll ? (
+      <div className="flex justify-center mt-4">
+        <button className="btn btn-primary" onClick={handleToggleView}>
+          Show Less
+        </button>
+      </div>
+    ) : (
+      <div className="flex justify-center mt-4">
+        <button className="btn btn-primary" onClick={handleToggleView}>
+          Show All
+        </button>
+      </div>
+    )}
+  </section>
   );
 };
 

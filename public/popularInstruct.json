@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "image": "https://m.media-amazon.com/images/I/81JDUlIjTCL._RI_SX480_FMwebp_.jpg",
+        "image": "https://images.pexels.com/photos/5212700/pexels-photo-5212700.jpeg?auto=compress&cs=tinysrgb&w=600",
         "name": "John Doe",
         "email": "johndoe@example.com",
         "numClassesTaken": 5,
@@ -9,7 +9,7 @@
       },
       {
         "id": 2,
-        "image": "https://m.media-amazon.com/images/I/91WlF5cAa+L._RI_SX480_FMwebp_.jpg",
+        "image": "https://images.pexels.com/photos/5212657/pexels-photo-5212657.jpeg?auto=compress&cs=tinysrgb&w=600",
         "name": "Mike Johnson",
         "email": "mikejohnson@example.com",
         "numClassesTaken": 2,
@@ -17,7 +17,7 @@
       },
       {
         "id": 3,
-        "image": "https://m.media-amazon.com/images/I/71Teou3wlmL._RI_SX480_FMwebp_.jpg",
+        "image": "https://images.pexels.com/photos/5212350/pexels-photo-5212350.jpeg?auto=compress&cs=tinysrgb&w=600",
         "name": "Mike Johnson",
         "email": "mikejohnson@example.com",
         "numClassesTaken": 2,
@@ -25,7 +25,7 @@
       },
       {
         "id": 4,
-        "image": "https://m.media-amazon.com/images/I/81o+uqExlqL._RI_SX480_FMwebp_.jpg",
+        "image": "https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=600",
         "name": "Sarah Davis",
         "email": "sarahdavis@example.com",
         "numClassesTaken": 4,
@@ -33,7 +33,7 @@
       },
       {
         "id": 5,
-        "image": "https://m.media-amazon.com/images/I/91WSfm-eXpL._RI_SX480_FMwebp_.jpg",
+        "image": "https://s3.eu-west-2.amazonaws.com/rds.prod/images/Evening_Flux_and_Flow.2e16d0ba.fill-600x400.jpg",
         "name": "Alex Brown",
         "email": "alexbrown@example.com",
         "numClassesTaken": 1,
@@ -41,7 +41,7 @@
       },
       {
         "id": 10,
-        "image": "https://m.media-amazon.com/images/I/71C6P0yVrKL._RI_SX480_FMwebp_.jpg",
+        "image": "https://s3.eu-west-2.amazonaws.com/rds.prod/images/_DSF8200_1e8dlvC.2e16d0ba.fill-600x400.jpg",
         "name": "Emily Wilson",
         "email": "emilywilson@example.com",
         "numClassesTaken": 0,
@@ -49,7 +49,7 @@
       },
       {
         "id": 6,
-        "image": "https://m.media-amazon.com/images/I/8198JOGJ2hL._RI_SX480_FMwebp_.jpg",
+        "image": "https://s3.eu-west-2.amazonaws.com/rds.prod/images/_DSC1145_.2e16d0ba.fill-600x400.jpg",
         "name": "David Thompson",
         "email": "davidthompson@example.com",
         "numClassesTaken": 6,
@@ -57,7 +57,7 @@
       },
       {
         "id": 7,
-        "image": "https://m.media-amazon.com/images/I/918ubBe6MwL._RI_SX480_FMwebp_.jpg",
+        "image": "https://s3.eu-west-2.amazonaws.com/rds.prod/images/image00022.2e16d0ba.fill-600x400.jpg",
         "name": "Olivia Rodriguez",
         "email": "oliviarodriguez@example.com",
         "numClassesTaken": 2,
@@ -65,7 +65,7 @@
       },
       {
         "id": 8,
-        "image": "https://m.media-amazon.com/images/I/81Lq-Y-yvQL._RI_SX480_FMwebp_.jpg",
+        "image": "https://s3.eu-west-2.amazonaws.com/rds.prod/images/Paul1.2e16d0ba.fill-600x400.jpg",
         "name": "Daniel Lee",
         "email": "daniellee@example.com",
         "numClassesTaken": 7,
@@ -73,7 +73,7 @@
       },
       {
         "id": 9,
-        "image": "https://m.media-amazon.com/images/I/71iNQkCiOyL._RI_SX480_FMwebp_.jpg",
+        "image": "https://s3.eu-west-2.amazonaws.com/rds.prod/images/Drawing_figures.2e16d0ba.fill-600x400.jpg",
         "name": "Sophia Anderson",
         "email": "sophiaanderson@example.com",
         "numClassesTaken": 3,
