@@ -4,6 +4,7 @@ import ClassCard from "../../../../components/ClassCard/ClassCard";
 const OrderTab = ({ items }) => {
   const [showAll, setShowAll] = useState(false);
   const visibleItems = showAll ? items : items.slice(0, 6);
+  
 
   return (
     <div className="">
