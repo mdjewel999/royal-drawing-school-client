@@ -10,6 +10,7 @@ import Dashboard from "../Layout/Dashboard";
 import ClassesPage from "../Pages/Home/ClassesPage/ClassesPage/ClassesPage";
 import Secret from "../Pages/Sheard/Secret/Secret";
 import PrivetRoute from "./PrivetRoute";
+import MyCart from "../Pages/Dashboard/MyCart/MyCart";
 
  export const router = createBrowserRouter([
     {
@@ -40,6 +41,12 @@ import PrivetRoute from "./PrivetRoute";
     },
     {
       path:'dashboard',
-      element:<Dashboard></Dashboard>
+      element:<PrivetRoute><Dashboard></Dashboard></PrivetRoute>,
+      children:[
+        {
+          path:'mycart',
+          element:<MyCart></MyCart>
+        }
+      ]
     }
   ]);

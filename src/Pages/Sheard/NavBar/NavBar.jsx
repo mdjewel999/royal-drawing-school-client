@@ -4,10 +4,13 @@ import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { FaShoppingCart } from "react-icons/fa";
 import useCart from "../../../hooks/useCart";
-const NavBar = () => {
-  const { user, logOut } = useContext(AuthContext);
-const [cart] = useCart()
+import useAdmin from "../../../hooks/useAdmin";
 
+
+const NavBar = () => {
+const { user, logOut } = useContext(AuthContext);
+const [cart] = useCart()
+const [isAdmin] = useAdmin()
 
   const handelLogOut = () => {
     logOut()
@@ -22,9 +25,17 @@ const [cart] = useCart()
       <li>
         <Link to="secret">secret</Link>
       </li>
+
+
+      {
+        isAdmin ? <li>
+        <Link to="/dashboard/adminhome">Dashboard</Link>
+      </li> :
       <li>
-        <Link to="dashboard">Dashboard</Link>
-      </li>
+      <Link to="/dashboard/userhome">Dashboard</Link>
+    </li>
+      }
+
       <li>
         <Link to="classes">Classes page</Link>
       </li>
@@ -56,8 +67,6 @@ const [cart] = useCart()
           </li>
         </>
       )}
-
-
     </>
   );
   return (

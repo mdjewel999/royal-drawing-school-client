@@ -1,27 +1,17 @@
-// import { NavLink, Outlet } from "react-router-dom";
-// import {
-//   FaShoppingCart,
-//   FaWallet,
-//   FaCalendarAlt,
-//   FaHome,
-//   FaUtensils,
-//   FaBook,
-//   FaUsers,
-// } from "react-icons/fa";
-// import useCart from "../hooks/useCart";
-// import useAdmin from "../hooks/useAdmin";
+import {  NavLink, Outlet } from "react-router-dom";
+import { FaBook, FaCalendarAlt, FaHome, FaShoppingCart, FaUsers, FaUtensils, FaWallet } from "react-icons/fa";
+import useCart from "../hooks/useCart";
+import useAdmin from "../hooks/useAdmin";
 
 const Dashboard = () => {
-//   const [cart] = useCart();
+  const [cart] = useCart();
 
   // TODO: load data from the server to have dynamic isAdmin based on Data
   // const isAdmin = true;
-//   const [isAdmin] = useAdmin();
+  const [isAdmin] = useAdmin();
 
   return (
-   <>
-   <h1>This is Dashboard</h1>
-    {/* <div className="drawer drawer-mobile ">
+    <div className="drawer drawer-mobile ">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col items-center justify-center">
         <Outlet></Outlet>
@@ -107,8 +97,7 @@ const Dashboard = () => {
           </li>
         </ul>
       </div>
-    </div> */}
-   </>
+    </div>
   );
 };
 

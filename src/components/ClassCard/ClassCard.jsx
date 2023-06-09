@@ -13,7 +13,6 @@ const ClassCard = ({ item }) => {
   const location = useLocation();
 
   const handleAddToService = item => {
-    
     console.log(item);
     if(user && user.email){
       const cartItem = {menuItemId: _id, name, instructorName, availableSeats, image, price, email: user.email}
@@ -27,7 +26,7 @@ const ClassCard = ({ item }) => {
       .then(res => res.json())
       .then(data => {
           if(data.insertedId){
-            refetch() // refetch cart to update the number of items in the cart
+            refetch() 
               Swal.fire({
                   position: 'top-end',
                   icon: 'success',
