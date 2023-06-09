@@ -18,6 +18,9 @@ const NavBar = () => {
         <Link to="/">Home</Link>
       </li>
       <li>
+        <Link to="secret">secret</Link>
+      </li>
+      <li>
         <Link to="dashboard">Dashboard</Link>
       </li>
       <li>
@@ -31,11 +34,11 @@ const NavBar = () => {
       
       {user ? (
         <>
-          <Link to="/signup">
+          <span>{user?.displayName}</span>
           <button onClick={handelLogOut} className="btn btn-active ">
             LogOut
           </button>
-          </Link>
+         
         </>
       ) : (
         <>

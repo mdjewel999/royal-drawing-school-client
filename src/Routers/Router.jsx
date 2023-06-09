@@ -8,6 +8,8 @@ import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import Dashboard from "../Layout/Dashboard";
 import ClassesPage from "../Pages/Home/ClassesPage/ClassesPage/ClassesPage";
+import Secret from "../Pages/Sheard/Secret/Secret";
+import PrivetRoute from "./PrivetRoute";
 
  export const router = createBrowserRouter([
     {
@@ -29,6 +31,10 @@ import ClassesPage from "../Pages/Home/ClassesPage/ClassesPage/ClassesPage";
         {
           path:'classes',
           element:<ClassesPage></ClassesPage>
+        },
+        {
+          path:'secret',
+          element:<PrivetRoute><Secret></Secret></PrivetRoute>
         }
       ]
     },
