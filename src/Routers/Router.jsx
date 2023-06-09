@@ -19,11 +19,11 @@ import ClassesPage from "../Pages/Home/ClassesPage/ClassesPage/ClassesPage";
             element:<Home></Home>
         },
         {
-          path:'login',
+          path:'/login',
           element:<Login></Login>
         },
         {
-          path:'signup',
+          path:'/signup',
           element:<SignUp></SignUp>
         },
         {

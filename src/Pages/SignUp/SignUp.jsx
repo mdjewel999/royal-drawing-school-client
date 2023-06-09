@@ -1,79 +1,73 @@
-// import { useContext } from "react";
-// import { Helmet } from "react-helmet-async";
-// import { useForm } from "react-hook-form";
-// import { Link, useNavigate } from "react-router-dom";
-// import Swal from "sweetalert2";
-// import { AuthContext } from "../../providers/AuthProvider";
-// import SocialLogin from "../Shared/SocialLogin/SocialLogin";
+import { useContext } from "react";
+import { useForm } from "react-hook-form";
+import { Link, useNavigate } from "react-router-dom";
 
+import { AuthContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
+import SocialLogin from "../Sheard/SocialLogin/SocialLogin";
 import { Helmet } from "react-helmet-async";
+import signUp from '../../assets/others/signup.jpeg'
+
 
 const SignUp = () => {
-//   const {
-//     register,
-//     handleSubmit,
-//     reset,
-//     formState: { errors },
-//   } = useForm();
-//   const { createUser, updateUserProfile } = useContext(AuthContext);
-//   const navigate = useNavigate();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+  const { createUser, updateUserProfile } = useContext(AuthContext);
+  const navigate = useNavigate();
 
-//   const onSubmit = (data) => {
-//     // console.log(data);
-//     createUser(data.email, data.password).then((result) => {
-//       const loggedUser = result.user;
-//       console.log(loggedUser);
+  const onSubmit = (data) => {
+    // console.log(data);
+    createUser(data.email, data.password).then((result) => {
+      const loggedUser = result.user;
+      console.log(loggedUser);
 
-//       updateUserProfile(data.name, data.photoURL)
-//         .then(() => {
-//           const saveUser = { name: data.name, email: data.email }
-//           fetch("http://localhost:5000/users", {
-//             method: "POST",
-//             headers: {
-//               "content-type": "application/json",
-//             },
-//             body: JSON.stringify(saveUser),
-//           })
-//             .then((res) => res.json())
-//             .then((data) => {
-//               if (data.insertedId) {
-//                 console.log("user profile info updated");
-//                 reset();
-//                 Swal.fire({
-//                   position: "top-end",
-//                   icon: "success",
-//                   title: "User created successfully.",
-//                   showConfirmButton: false,
-//                   timer: 1500,
-//                 });
-//                 navigate("/");
-//               }
-//             });
-//         })
-//         .catch((error) => console.log(error));
-//     });
-//   };
+      updateUserProfile(data.name, data.photoURL)
+      
+        .then(() => {
+          const saveUser = { name: data.name, email: data.email }
+          fetch("http://localhost:5000/users", {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify(saveUser),
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              if (data.insertedId) {
+                console.log("user profile info updated");
+                reset();
+                Swal.fire({
+                  position: "top-end",
+                  icon: "success",
+                  title: "User created successfully.",
+                  showConfirmButton: false,
+                  timer: 1500,
+                });
+                navigate("/");
+              }
+            });
+        })
+        .catch((error) => console.log(error));
+    });
+  };
 
   return (
     <>
-    <h1>This is LogOut Page</h1>
     <Helmet>
         <title>Sign Up Page</title>
       </Helmet>
-      {/* <Helmet>
-        <title>Sign Up Page</title>
-      </Helmet>
+      
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold">Sign up now!</h1>
-            <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
+          <div className="text-center md:w-1/2 lg:text-left">
+            <img className="rounded-md" src={signUp} alt="" />
           </div>
-          <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+          <div className="card flex-shrink-0  md:w-1/2 max-w-sm shadow-2xl bg-base-100">
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
               <div className="form-control">
                 <label className="label">
@@ -173,7 +167,7 @@ const SignUp = () => {
             <SocialLogin></SocialLogin>
           </div>
         </div>
-      </div> */}
+      </div>
     </>
   );
 };
