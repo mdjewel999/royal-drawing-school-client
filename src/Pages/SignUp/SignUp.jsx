@@ -1,13 +1,11 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
-
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
 import SocialLogin from "../Sheard/SocialLogin/SocialLogin";
 import { Helmet } from "react-helmet-async";
-import signUp from '../../assets/others/signup.jpeg'
-
+import signUp from "../../assets/others/signup.jpeg";
 
 const SignUp = () => {
   const {
@@ -15,53 +13,79 @@ const SignUp = () => {
     handleSubmit,
     reset,
     formState: { errors },
+    watch,
   } = useForm();
   const { createUser, updateUserProfile } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const onSubmit = (data) => {
-    // console.log(data);
-    createUser(data.email, data.password).then((result) => {
-      const loggedUser = result.user;
-      console.log(loggedUser);
+    const { name, email, password, photoURL, confirmPassword, gender, phoneNumber, address } = data;
+    if (password !== confirmPassword) {
+      Swal.fire({
+        icon: "error",
+        title: "Password does not match",
+      });
+      return;
+    }
 
-      updateUserProfile(data.name, data.photoURL)
-      
-        .then(() => {
-          const saveUser = { name: data.name, email: data.email }
-          fetch("http://localhost:5000/users", {
-            method: "POST",
-            headers: {
-              "content-type": "application/json",
-            },
-            body: JSON.stringify(saveUser),
+    createUser(email, password)
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+
+        updateUserProfile(name, photoURL)
+          .then(() => {
+            const saveUser = {
+              name,
+              email,
+              photoURL,
+              gender,
+              phoneNumber,
+              address,
+            };
+            fetch("http://localhost:5000/users", {
+              method: "POST",
+              headers: {
+                "content-type": "application/json",
+              },
+              body: JSON.stringify(saveUser),
+            })
+              .then((res) => res.json())
+              .then((data) => {
+                if (data.insertedId) {
+                  console.log("user profile info updated");
+                  reset();
+                  Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "User created successfully.",
+                    showConfirmButton: false,
+                    timer: 1500,
+                  });
+                  navigate("/");
+                }
+              });
           })
-            .then((res) => res.json())
-            .then((data) => {
-              if (data.insertedId) {
-                console.log("user profile info updated");
-                reset();
-                Swal.fire({
-                  position: "top-end",
-                  icon: "success",
-                  title: "User created successfully.",
-                  showConfirmButton: false,
-                  timer: 1500,
-                });
-                navigate("/");
-              }
-            });
-        })
-        .catch((error) => console.log(error));
-    });
+          .catch((error) => console.log(error));
+      })
+      .catch((error) => {
+        Swal.fire({
+          icon: "error",
+          title: "Registration failed",
+          text: error.message,
+        });
+      });
   };
+
+  const password = watch("password");
+  // const confirmPassword = watch("confirmPassword");
 
   return (
     <>
-    <Helmet>
+      <Helmet>
         <title>Sign Up Page</title>
       </Helmet>
-      
+
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center md:w-1/2 lg:text-left">
@@ -76,7 +100,6 @@ const SignUp = () => {
                 <input
                   type="text"
                   {...register("name", { required: true })}
-                  name="name"
                   placeholder="Name"
                   className="input input-bordered"
                 />
@@ -105,8 +128,7 @@ const SignUp = () => {
                 <input
                   type="email"
                   {...register("email", { required: true })}
-                  name="email"
-                  placeholder="email"
+                  placeholder="Email"
                   className="input input-bordered"
                 />
                 {errors.email && (
@@ -122,34 +144,78 @@ const SignUp = () => {
                   {...register("password", {
                     required: true,
                     minLength: 6,
-                    maxLength: 20,
-                    pattern: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/,
                   })}
-                  placeholder="password"
+                  placeholder="Password"
                   className="input input-bordered"
                 />
                 {errors.password?.type === "required" && (
-                  <p className="text-red-600">Password is required</p>
+                  <span className="text-red-600">Password is required</span>
                 )}
                 {errors.password?.type === "minLength" && (
-                  <p className="text-red-600">Password must be 6 characters</p>
+                  <span className="text-red-600">
+                    Password must be at least 6 characters
+                  </span>
                 )}
-                {errors.password?.type === "maxLength" && (
-                  <p className="text-red-600">
-                    Password must be less than 20 characters
-                  </p>
-                )}
-                {errors.password?.type === "pattern" && (
-                  <p className="text-red-600">
-                    Password must have one Uppercase one lower case, one number
-                    and one special character.
-                  </p>
-                )}
+              </div>
+              <div className="form-control">
                 <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
-                    Forgot password?
-                  </a>
+                  <span className="label-text">Confirm Password</span>
                 </label>
+                <input
+                  type="password"
+                  {...register("confirmPassword", {
+                    required: true,
+                    validate: (value) => value === password,
+                  })}
+                  placeholder="Confirm Password"
+                  className="input input-bordered"
+                />
+                {errors.confirmPassword?.type === "required" && (
+                  <span className="text-red-600">Confirm Password is required</span>
+                )}
+                {errors.confirmPassword?.type === "validate" && (
+                  <span className="text-red-600">Passwords do not match</span>
+                )}
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Gender</span>
+                </label>
+                <select {...register("gender", { required: true })} className="input input-bordered">
+                  <option value="">Select Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+                {errors.gender && (
+                  <span className="text-red-600">Gender is required</span>
+                )}
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Phone Number</span>
+                </label>
+                <input
+                  type="text"
+                  {...register("phoneNumber", { required: true })}
+                  placeholder="Phone Number"
+                  className="input input-bordered"
+                />
+                {errors.phoneNumber && (
+                  <span className="text-red-600">Phone Number is required</span>
+                )}
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Address</span>
+                </label>
+                <textarea
+                  {...register("address", { required: true })}
+                  placeholder="Address"
+                  className="textarea textarea-bordered"
+                ></textarea>
+                {errors.address && (
+                  <span className="text-red-600">Address is required</span>
+                )}
               </div>
               <div className="form-control mt-6">
                 <input
