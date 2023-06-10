@@ -25,7 +25,7 @@ const PopularClasses = () => {
       ></SectionTitle>
       <div className="grid md:grid-cols-3 gap-4">
         {popularInstruct.slice(0, showAll ? popularInstruct.length : 6).map(item => (
-          <StudentesClass key={item.id} item={item}></StudentesClass>
+          <StudentesClass key={item._id} item={item}></StudentesClass>
         ))}
       </div>
       <div className="flex justify-center mt-4">
@@ -38,6 +38,7 @@ const PopularClasses = () => {
 };
 
 export default PopularClasses;
+
 
 
 

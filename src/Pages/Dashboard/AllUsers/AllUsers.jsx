@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { Helmet } from "react-helmet-async";
-import { FaTrashAlt, FaUserShield } from "react-icons/fa";
+import { FaTrashAlt } from "react-icons/fa";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 
@@ -58,6 +58,7 @@ const AllUsers = () => {
               <th>Name</th>
               <th>Email</th>
               <th>Role</th>
+              <th>Role</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -69,15 +70,30 @@ const AllUsers = () => {
                 <td>{user.email}</td>
                 <td>
                   {user.role === "admin" ? (
-                    "admin"
+                    "MAKE ADMIN"
                   ) : (
                     <button
                       onClick={() => handleMakeAdmin(user._id)}
                       className="btn btn-ghost bg-yellow-600  text-white"
                     >
-                      <FaUserShield></FaUserShield>
+                      {/* <FaUserShield></FaUserShield> */}
+                      MAKE ADMIN
                     </button>
-                  )}
+                  )
+                  }
+                </td>
+                <td>
+                  {user.role === "admin" ? (
+                    "MAKE INSTRUCTOR"
+                  ) : (
+                    <button
+                      onClick={() => handleMakeAdmin(user._id)}
+                      className="btn btn-ghost bg-yellow-600  text-white"
+                    >
+                    MAKE INSTRUCTOR
+                    </button>
+                  )
+                  }
                 </td>
                 <td>
                   <button

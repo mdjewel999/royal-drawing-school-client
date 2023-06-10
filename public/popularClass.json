@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "_id": 1,
     "image": "https://images.pexels.com/photos/7004697/pexels-photo-7004697.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Introduction to Drawing",
     "instructorName": "John Doe",
@@ -9,7 +9,7 @@
     "price": 29.99
   },
   {
-    "id": 2,
+    "_id": 2,
     "image": "https://images.pexels.com/photos/4659806/pexels-photo-4659806.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Advanced Portrait Drawing",
     "instructorName": "Jane Smith",
@@ -18,7 +18,7 @@
     "price": 49.99
   },
   {
-    "id": 2,
+    "_id": 2,
     "image": "https://images.pexels.com/photos/7004739/pexels-photo-7004739.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Advanced Portrait Drawing",
     "instructorName": "Jane Smith",
@@ -27,7 +27,7 @@
     "price": 49.99
   },
   {
-    "id": 12,
+    "_id": 12,
     "image": "https://images.pexels.com/photos/7031674/pexels-photo-7031674.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Advanced Portrait Drawing",
     "instructorName": "Jane Smith",
@@ -36,7 +36,7 @@
     "price": 49.99
   },
   {
-    "id": 22,
+    "_id": 22,
     "image": "https://images.pexels.com/photos/8904102/pexels-photo-8904102.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Advanced Portrait Drawing",
     "instructorName": "Jane Smith",
@@ -45,7 +45,7 @@
     "price": 49.99
   },
   {
-    "id": 32,
+    "_id": 32,
     "image": "https://images.pexels.com/photos/7004737/pexels-photo-7004737.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Advanced Portrait Drawing",
     "instructorName": "Jane Smith",
@@ -54,7 +54,7 @@
     "price": 49.99
   },
   {
-    "id": 52,
+    "_id": 52,
     "image": "https://images.pexels.com/photos/5603660/pexels-photo-5603660.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Advanced Portrait Drawing",
     "instructorName": "Jane Smith",
@@ -63,7 +63,7 @@
     "price": 49.99
   },
   {
-    "id": 53,
+    "_id": 53,
     "image": "https://images.pexels.com/photos/4348196/pexels-photo-4348196.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Landscape Sketching",
     "instructorName": "Michael Johnson",
@@ -72,7 +72,7 @@
     "price": 39.99
   },
   {
-    "id": 4,
+    "_id": 4,
     "image": "https://images.pexels.com/photos/5642024/pexels-photo-5642024.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Cartooning Basics",
     "instructorName": "Emily Wilson",
@@ -81,7 +81,7 @@
     "price": 24.99
   },
   {
-    "id": 5,
+    "_id": 5,
     "image": "https://images.pexels.com/photos/7746615/pexels-photo-7746615.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Still Life Masterclass",
     "instructorName": "David Thompson",
@@ -90,7 +90,7 @@
     "price": 34.99
   },
   {
-    "id": 6,
+    "_id": 6,
     "image": "https://images.pexels.com/photos/5716298/pexels-photo-5716298.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Anatomy for Artists",
     "instructorName": "Sarah Adams",
@@ -99,7 +99,7 @@
     "price": 44.99
   },
   {
-    "id": 7,
+    "_id": 7,
     "image": "https://images.pexels.com/photos/5825421/pexels-photo-5825421.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Perspective Made Easy",
     "instructorName": "Robert Anderson",
@@ -108,7 +108,7 @@
     "price": 19.99
   },
   {
-    "id": 8,
+    "_id": 8,
     "image": "https://images.pexels.com/photos/5825545/pexels-photo-5825545.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Animal Portraits",
     "instructorName": "Michelle Lee",
@@ -117,7 +117,7 @@
     "price": 29.99
   },
   {
-    "id": 9,
+    "_id": 9,
     "image": "https://images.pexels.com/photos/5641995/pexels-photo-5641995.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Architectural Sketching",
     "instructorName": "James Thompson",
@@ -126,7 +126,7 @@
     "price": 39.99
   },
   {
-    "id": 10,
+    "_id": 10,
     "image": "https://images.pexels.com/photos/5987164/pexels-photo-5987164.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Experimental Drawing Techniques",
     "instructorName": "Amy Davis",
@@ -135,7 +135,7 @@
     "price": 49.99
   },
   {
-    "id": 11,
+    "_id": 11,
     "image": "https://images.pexels.com/photos/8251592/pexels-photo-8251592.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Dynamic Figure Drawing",
     "instructorName": "John Doe",
@@ -144,7 +144,7 @@
     "price": 34.99
   },
   {
-    "id": 12,
+    "_id": 12,
     "image": "https://images.pexels.com/photos/4474005/pexels-photo-4474005.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Expressive Portrait Drawing",
     "instructorName": "Emily Wilson",
@@ -153,7 +153,7 @@
     "price": 39.99
   },
   {
-    "id": 13,
+    "_id": 13,
     "image": "https://images.pexels.com/photos/5490275/pexels-photo-5490275.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Nature Sketching",
     "instructorName": "Michael Johnson",
@@ -162,7 +162,7 @@
     "price": 29.99
   },
   {
-    "id": 14,
+    "_id": 14,
     "image": "https://images.pexels.com/photos/4348194/pexels-photo-4348194.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Character Design Workshop",
     "instructorName": "Jane Smith",
@@ -171,7 +171,7 @@
     "price": 44.99
   },
   {
-    "id": 15,
+    "_id": 15,
     "image": "https://images.pexels.com/photos/4544904/pexels-photo-4544904.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Realistic Still Life Drawing",
     "instructorName": "David Thompson",
@@ -180,7 +180,7 @@
     "price": 34.99
   },
   {
-    "id": 16,
+    "_id": 16,
     "image": "https://images.pexels.com/photos/5212657/pexels-photo-5212657.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Figure Anatomy Study",
     "instructorName": "Sarah Adams",
@@ -189,7 +189,7 @@
     "price": 24.99
   },
   {
-    "id": 17,
+    "_id": 17,
     "image": "https://images.pexels.com/photos/5490278/pexels-photo-5490278.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Architectural Rendering Techniques",
     "instructorName": "James Thompson",
@@ -198,7 +198,7 @@
     "price": 49.99
   },
   {
-    "id": 18,
+    "_id": 18,
     "image": "https://images.pexels.com/photos/4473994/pexels-photo-4473994.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Abstract Drawing",
     "instructorName": "Amy Davis",
@@ -207,7 +207,7 @@
     "price": 29.99
   },
   {
-    "id": 19,
+    "_id": 19,
     "image": "https://images.pexels.com/photos/5642021/pexels-photo-5642021.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Gesture Drawing",
     "instructorName": "Robert Anderson",
@@ -216,7 +216,7 @@
     "price": 19.99
   },
   {
-    "id": 20,
+    "_id": 20,
     "image": "https://images.pexels.com/photos/6740690/pexels-photo-6740690.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Portrait Sketching",
     "instructorName": "Emily Wilson",
@@ -225,7 +225,7 @@
     "price": 39.99
   },
   {
-    "id": 21,
+    "_id": 21,
     "image": "https://images.pexels.com/photos/6740690/pexels-photo-6740690.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "En Plein Air Drawing",
     "instructorName": "Michael Johnson",
@@ -234,7 +234,7 @@
     "price": 34.99
   },
   {
-    "id": 22,
+    "_id": 22,
     "image": "https://images.pexels.com/photos/7147667/pexels-photo-7147667.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Comic Book Illustration",
     "instructorName": "Jane Smith",
@@ -243,7 +243,7 @@
     "price": 44.99
   },
   {
-    "id": 31,
+    "_id": 31,
     "image": "https://images.pexels.com/photos/5825534/pexels-photo-5825534.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Cartoon Character Design",
     "instructorName": "John Johnson",
@@ -252,7 +252,7 @@
     "price": 39.99
 },
 {
-  "id": 32,
+  "_id": 32,
   "image": "https://images.pexels.com/photos/6438750/pexels-photo-6438750.jpeg?auto=compress&cs=tinysrgb&w=600",
   "name": "Digital Cartooning",
   "instructorName": "Emily Wilson",
@@ -261,7 +261,7 @@
   "price": 29.99
 },
 {
-  "id": 33,
+  "_id": 33,
   "image": "https://images.pexels.com/photos/5716290/pexels-photo-5716290.jpeg?auto=compress&cs=tinysrgb&w=600",
   "name": "Cartoon Animation Basics",
   "instructorName": "Michael Thompson",
@@ -270,7 +270,7 @@
   "price": 24.99
 },
 {
-  "id": 34,
+  "_id": 34,
   "image": "https://images.pexels.com/photos/5623056/pexels-photo-5623056.jpeg?auto=compress&cs=tinysrgb&w=600",
   "name": "Character Design Workshop",
   "instructorName": "Amy Davis",
@@ -279,7 +279,7 @@
   "price": 44.99
 },
 {
-  "id": 36,
+  "_id": 36,
   "image": "https://images.pexels.com/photos/4473991/pexels-photo-4473991.jpeg?auto=compress&cs=tinysrgb&w=600",
   "name": "Comic Strip Creation",
   "instructorName": "James Wilson",
@@ -288,7 +288,7 @@
   "price": 19.99
 },
 {
-  "id": 37,
+  "_id": 37,
   "image": "https://images.pexels.com/photos/3932952/pexels-photo-3932952.jpeg?auto=compress&cs=tinysrgb&w=600",
   "name": "Digital Inking Techniques",
   "instructorName": "Robert Anderson",
@@ -298,7 +298,7 @@
 },
 
   {
-    "id": 23,
+    "_id": 23,
     "image": "https://images.pexels.com/photos/4709865/pexels-photo-4709865.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Composition in Still Life",
     "instructorName": "David Thompson",
@@ -307,7 +307,7 @@
     "price": 29.99
   },
   {
-    "id": 41,
+    "_id": 41,
     "image": "https://images.pexels.com/photos/5825528/pexels-photo-5825528.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Mastering Light and Shadow in Still Life",
     "instructorName": "John Johnson",
@@ -316,7 +316,7 @@
     "price": 39.99
 },
 {
-  "id": 42,
+  "_id": 42,
   "image": "https://images.pexels.com/photos/7257021/pexels-photo-7257021.jpeg?auto=compress&cs=tinysrgb&w=600",
   "name": "Creating Realistic Textures in Still Life",
   "instructorName": "Emily Wilson",
@@ -325,7 +325,7 @@
   "price": 29.99
 },
 {
-  "id": 43,
+  "_id": 43,
   "image": "https://images.pexels.com/photos/5642015/pexels-photo-5642015.jpeg?auto=compress&cs=tinysrgb&w=600",
   "name": "Exploring Color Harmonies in Still Life",
   "instructorName": "Michael Thompson",
@@ -334,7 +334,7 @@
   "price": 24.99
 },
 {
-  "id": 44,
+  "_id": 44,
   "image": "https://media.istockphoto.com/id/1136806587/photo/group-of-art-students-drawing-paintings-at-art-studio.jpg?b=1&s=612x612&w=0&k=20&c=B4oFkjk5MGC-a0Z8uVHrpEEJPKpbRvH7BAVL2vN71XQ=",
   "name": "Arranging Dynamic Compositions in Still Life",
   "instructorName": "Amy Davis",
@@ -343,7 +343,7 @@
   "price": 44.99
 },
 {
-  "id": 45,
+  "_id": 45,
   "image": "https://images.pexels.com/photos/4474044/pexels-photo-4474044.jpeg?auto=compress&cs=tinysrgb&w=600",
   "name": "Capturing Reflections in Still Life",
   "instructorName": "Sarah Adams",
@@ -352,7 +352,7 @@
   "price": 34.99
 },
 {
-  "id": 46,
+  "_id": 46,
   "image": "https://images.pexels.com/photos/4219212/pexels-photo-4219212.jpeg?auto=compress&cs=tinysrgb&w=600",
   "name": "Creating Textured Surfaces in Still Life",
   "instructorName": "James Wilson",
@@ -361,7 +361,7 @@
   "price": 19.99
 },
 {
-  "id": 47,
+  "_id": 47,
   "image": "https://images.pexels.com/photos/5716300/pexels-photo-5716300.jpeg?auto=compress&cs=tinysrgb&w=600",
   "name": "Exploring Compositional Techniques in Still Life",
   "instructorName": "Robert Anderson",
@@ -370,7 +370,7 @@
   "price": 29.99
 },
 {
-  "id": 48,
+  "_id": 48,
   "image": "https://images.pexels.com/photos/5093991/pexels-photo-5093991.jpeg?auto=compress&cs=tinysrgb&w=600",
   "name": "Advanced Still Life Rendering",
   "instructorName": "David Thompson",
@@ -379,7 +379,7 @@
   "price": 39.99
 },
 {
-  "id": 49,
+  "_id": 49,
   "image": "https://images.pexels.com/photos/5093987/pexels-photo-5093987.jpeg?auto=compress&cs=tinysrgb&w=600",
   "name": "Textures and Surfaces in Still Life",
   "instructorName": "Michael Johnson",
@@ -389,7 +389,7 @@
 },
 
   {
-    "id": 24,
+    "_id": 24,
     "image": "https://images.pexels.com/photos/5622353/pexels-photo-5622353.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Anatomy for Figure Artists",
     "instructorName": "Sarah Adams",
@@ -398,7 +398,7 @@
     "price": 39.99
   },
   {
-    "id": 25,
+    "_id": 25,
     "image": "https://images.pexels.com/photos/5501875/pexels-photo-5501875.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Architectural Perspective Drawing",
     "instructorName": "James Thompson",
@@ -407,7 +407,7 @@
     "price": 49.99
   },
   {
-    "id": 26,
+    "_id": 26,
     "image": "https://images.pexels.com/photos/5622361/pexels-photo-5622361.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Experimental Mark Making",
     "instructorName": "Amy Davis",
@@ -416,7 +416,7 @@
     "price": 24.99
   },
   {
-    "id": 27,
+    "_id": 27,
     "image": "https://images.pexels.com/photos/4473984/pexels-photo-4473984.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Dynamic Figure Poses",
     "instructorName": "Robert Anderson",
@@ -425,7 +425,7 @@
     "price": 34.99
   },
   {
-    "id": 28,
+    "_id": 28,
     "image": "https://images.pexels.com/photos/4473980/pexels-photo-4473980.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Expressive Portrait Painting",
     "instructorName": "Emily Wilson",
@@ -434,7 +434,7 @@
     "price": 49.99
   },
   {
-    "id": 29,
+    "_id": 29,
     "image": "https://images.pexels.com/photos/5642025/pexels-photo-5642025.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Fantasy Landscape Drawing",
     "instructorName": "Michael Johnson",
@@ -443,7 +443,7 @@
     "price": 29.99
   },
   {
-    "id": 30,
+    "_id": 30,
     "image": "https://images.pexels.com/photos/7257020/pexels-photo-7257020.jpeg?auto=compress&cs=tinysrgb&w=600",
     "name": "Character Design for Animation",
     "instructorName": "Jane Smith",
