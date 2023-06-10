@@ -40,9 +40,10 @@ import Dashboard from "../Layout/Dashboard";
         }
       ]
     },
+
     {
-      path:'dashboard',
-      element:<PrivetRoute><Dashboard></Dashboard></PrivetRoute>,
+      path:'/dashboard',
+      element:<Dashboard></Dashboard>,
       children:[
         {
           path:'mycart',
@@ -54,4 +55,5 @@ import Dashboard from "../Layout/Dashboard";
         },
       ]
     }
+    
   ]);

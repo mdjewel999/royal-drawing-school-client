@@ -7,18 +7,21 @@ import useAxiosSecure from "../../../hooks/useAxiosSecure";
 const AllUsers = () => {
   const [axiosSecure] = useAxiosSecure();
   const { data: users = [], refetch } = useQuery(["users"], async () => {
-    const res = await axiosSecure.get("/users");
-    return res.data;
+    try {
+      const res = await axiosSecure.get("/users");
+      return res.data;
+    } catch (error) {
+      console.error("Error fetching users:", error);
+      throw error;
+    }
   });
 
   const handleMakeAdmin = (user) => {
-    fetch(`http://localhost:5000/users/admin/${user._id}`, {
-      method: "PATCH",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        if (data.modifiedCount) {
+    axiosSecure
+      .patch(`/users/admin/${user._id}`)
+      .then((res) => {
+        console.log(res.data);
+        if (res.data.modifiedCount) {
           refetch();
           Swal.fire({
             position: "top-end",
@@ -28,10 +31,15 @@ const AllUsers = () => {
             timer: 1500,
           });
         }
+      })
+      .catch((error) => {
+        console.error("Error making user admin:", error);
       });
   };
 
-  const handleDelete = (user) => {};
+  const handleDelete = () => {
+    // Implement your delete logic here
+  };
 
   return (
     <div className="w-full">
