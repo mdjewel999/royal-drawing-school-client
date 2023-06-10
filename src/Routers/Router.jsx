@@ -6,12 +6,12 @@ import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
-import Dashboard from "../Layout/Dashboard";
 import ClassesPage from "../Pages/Home/ClassesPage/ClassesPage/ClassesPage";
 import Secret from "../Pages/Sheard/Secret/Secret";
 import PrivetRoute from "./PrivetRoute";
 import MyCart from "../Pages/Dashboard/MyCart/MyCart";
 import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
+import Dashboard from "../Layout/Dashboard";
 
  export const router = createBrowserRouter([
     {

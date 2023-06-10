@@ -60,7 +60,6 @@ const googleSignIn =() =>{
       setUser(currentUser);
       console.log("current user", currentUser);
       setLoading(false);
-      // get and set token
       
       if(currentUser){
         axios.post('http://localhost:5000/jwt', {email:currentUser.email})
