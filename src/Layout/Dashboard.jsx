@@ -26,12 +26,12 @@ const Dashboard = () => {
     <li>
       <NavLink to="/dashboard/addItem">
         {" "}
-        <FaUtensils></FaUtensils> Add An Items
+        <FaUtensils></FaUtensils> Add An Classes
       </NavLink>
     </li>
     <li>
       <NavLink to="/dashboard/manageitems">
-        <FaWallet></FaWallet> Manage Items
+        <FaWallet></FaWallet> Manage Classes
       </NavLink>
     </li>
     <li>
@@ -83,7 +83,7 @@ const Dashboard = () => {
   <NavLink to="/menu"> Our Menu</NavLink>
 </li>
 <li>
-  <NavLink to="/order/salad">Order Food</NavLink>
+  <NavLink to="/classes">My Classes</NavLink>
 </li>
 </ul>
       <div className="drawer-content flex flex-col items-center justify-center">

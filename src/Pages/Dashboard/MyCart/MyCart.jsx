@@ -52,10 +52,10 @@ const MyCart = () => {
           {/* head */}
           <thead>
             <tr>
-              <th>#</th>
+              <th>Serial Number</th>
               <th>Classes</th>
-              <th>Item Name</th>
-              <th>Price</th>
+              <th>Classes Name</th>
+              <th>Class Cost</th>
               <th>Action</th>
             </tr>
           </thead>

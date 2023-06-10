@@ -54,7 +54,7 @@ const AllUsers = () => {
           {/* head */}
           <thead>
             <tr>
-              <th>#</th>
+              <th>Serial Number</th>
               <th>Name</th>
               <th>Email</th>
               <th>Role</th>
@@ -72,8 +72,8 @@ const AllUsers = () => {
                     "admin"
                   ) : (
                     <button
-                      onClick={() => handleMakeAdmin(user)}
-                      className="btn btn-ghost bg-orange-600  text-white"
+                      onClick={() => handleMakeAdmin(user._id)}
+                      className="btn btn-ghost bg-yellow-600  text-white"
                     >
                       <FaUserShield></FaUserShield>
                     </button>
