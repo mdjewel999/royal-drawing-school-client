@@ -13,11 +13,12 @@ const Dashboard = () => {
   return (
     <>
   
-    <div className="drawer drawer-mobile ">
+    <div className="drawer drawer-mobile  ">
     <ul className="menu p-4 w-80">
 
 {isAdmin ? (
   <>
+    <div>
     <li>
       <NavLink to="/dashboard/adminhome">
         <FaHome></FaHome> Admin Home
@@ -35,8 +36,8 @@ const Dashboard = () => {
       </NavLink>
     </li>
     <li>
-      <NavLink to="/dashboard/">
-        <FaBook></FaBook> Manage Bookings
+      <NavLink to="/dashboard/allusers">
+        <FaBook></FaBook> Manage Users
       </NavLink>
     </li>
     <li>
@@ -44,10 +45,12 @@ const Dashboard = () => {
         <FaUsers></FaUsers> All Users
       </NavLink>
     </li>
+    </div>
   </>
 ) : (
   <>
-    <li>
+   <div>
+   <li>
       <NavLink to="/dashboard/userhome">
         <FaHome></FaHome> User Home
       </NavLink>
@@ -70,10 +73,12 @@ const Dashboard = () => {
         </span>
       </NavLink>
     </li>
+   </div>
   </>
 )}
 
 <div className="divider"></div>
+<div>
 <li>
   <NavLink to="/">
     <FaHome></FaHome> Home
@@ -85,6 +90,8 @@ const Dashboard = () => {
 <li>
   <NavLink to="/classes">My Classes</NavLink>
 </li>
+
+</div>
 </ul>
       <div className="drawer-content flex flex-col items-center justify-center">
         <Outlet></Outlet>
