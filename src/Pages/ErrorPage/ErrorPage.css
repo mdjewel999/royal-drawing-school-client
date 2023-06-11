@@ -1,0 +1,32 @@
+.error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .error-img {
+    border: 2px solid white;
+    border-radius: 100%;
+    width: 500px;
+    height: 500px;
+    animation: rotate 4s infinite linear;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .go-to-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  

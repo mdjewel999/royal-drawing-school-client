@@ -39,7 +39,7 @@ const ClassesPage = () => {
                 </TabList>
                 <div className="mt-10">
                 <TabPanel>
-                   <OrderTab  items={anatomyDrawing}></OrderTab>
+                   <OrderTab items={anatomyDrawing}></OrderTab>
                 </TabPanel>
                 <TabPanel>
                 <OrderTab items={stillLifeDrawing}></OrderTab>

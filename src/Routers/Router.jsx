@@ -15,6 +15,9 @@ import Dashboard from "../Layout/Dashboard";
 import AddItem from "../Pages/Dashboard/AddItem/AddItem";
 import AdminRoute from "./AdminRoute";
 import ManageClass from "../Pages/Dashboard/ManageClass/ManageClass";
+import Payment from "../Pages/Dashboard/Payment/Payment";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import InstructorsPage from "../Pages/Home/InstructorsPage/InstructorsPage";
 
  export const router = createBrowserRouter([
     {
@@ -38,6 +41,10 @@ import ManageClass from "../Pages/Dashboard/ManageClass/ManageClass";
           element:<ClassesPage></ClassesPage>
         },
         {
+          path:'InstructorsPage',
+          element:<InstructorsPage></InstructorsPage>
+        },
+        {
           path:'secret',
           element:<PrivetRoute><Secret></Secret></PrivetRoute>
         }
@@ -53,8 +60,12 @@ import ManageClass from "../Pages/Dashboard/ManageClass/ManageClass";
           element:<MyCart></MyCart>
         },
         {
+          path:'payment',
+          element:<Payment></Payment>
+        },
+        {
           path:'allusers',
-          element:<AllUsers></AllUsers>
+          element:<AdminRoute><AllUsers></AllUsers></AdminRoute>
         },
         {
           path:'addItem',
@@ -63,8 +74,13 @@ import ManageClass from "../Pages/Dashboard/ManageClass/ManageClass";
         {
           path:'manageClass',
           element:<AdminRoute><ManageClass></ManageClass></AdminRoute>
-        }
+        },
+      
       ]
+    },
+    {
+      path:'*',
+      element:<ErrorPage></ErrorPage>
     }
     
   ]);
