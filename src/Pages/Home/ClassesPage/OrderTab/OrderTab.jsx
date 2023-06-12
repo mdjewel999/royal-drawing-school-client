@@ -8,7 +8,7 @@ const OrderTab = ({ items }) => {
 
   return (
     <div className="">
-      <div className="grid md:grid-cols-3 gap-4">
+      <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-6">
         {visibleItems.map((item) => (
           <ClassCard key={item.id} item={item} />
         ))}
