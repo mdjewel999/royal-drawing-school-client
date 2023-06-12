@@ -88,7 +88,7 @@ const Dashboard = () => {
   <NavLink to="/menu"> Our Menu</NavLink>
 </li>
 <li>
-  <NavLink to="/classes">My Classes</NavLink>
+  <NavLink to="/dashboard/mycart">My Classes</NavLink>
 </li>
 
 </div>

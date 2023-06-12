@@ -1,22 +1,34 @@
 import { Link } from "react-router-dom";
 import logo from "../../../assets/logo/logo.jpg";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { FaShoppingCart } from "react-icons/fa";
 import useCart from "../../../hooks/useCart";
 import useAdmin from "../../../hooks/useAdmin";
+import './ThemeToggle.css'
 
 
 const NavBar = () => {
 const { user, logOut } = useContext(AuthContext);
 const [cart] = useCart()
 const [isAdmin] = useAdmin()
-
+const [isDarkMode, setIsDarkMode] = useState(false);
   const handelLogOut = () => {
     logOut()
       .then(() => {})
       .catch((error) => console.log(error));
   };
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }, [isDarkMode]);
+
+
+
   const navOption = (
     <>
       <li>
@@ -29,13 +41,16 @@ const [isAdmin] = useAdmin()
 
       {
         isAdmin ? <li>
-        <Link to="/dashboard/adminhome">Dashboard</Link>
+        <Link to="/dashboard/allusers">Admin Dashboard</Link>
       </li> :
       <li>
-      <Link to="/dashboard/userhome">Dashboard</Link>
+      <Link to="/login">Dashboard</Link>
     </li>
       }
 
+      <li>
+        <Link to="/dashboard/mycart">Students Dashboard</Link>
+      </li>
       <li>
         <Link to="classes">Classes page</Link>
       </li>
@@ -72,7 +87,7 @@ const [isAdmin] = useAdmin()
   );
   return (
     <>
-      <div className="navbar max-w-screen-xl  bg-opacity-30 bg-black text-white">
+      <div className={`navbar max-w-screen-xl bg-opacity-30 ${isDarkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -107,7 +122,9 @@ const [isAdmin] = useAdmin()
           <ul className="menu menu-horizontal px-1">{navOption}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+        <button className="btn" onClick={() => setIsDarkMode(isDarkMode === '' ? 'dark-mode' : '')}>
+            Toggle Theme
+          </button>
         </div>
       </div>
     </>
