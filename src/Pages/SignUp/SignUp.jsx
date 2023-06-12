@@ -43,7 +43,7 @@ const SignUp = () => {
               phoneNumber,
               address,
             };
-            fetch("http://localhost:5000/users", {
+            fetch("https://royal-drawing-school-server-mdjewel999.vercel.app/users", {
               method: "POST",
               headers: {
                 "content-type": "application/json",

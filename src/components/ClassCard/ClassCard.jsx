@@ -23,7 +23,7 @@ const ClassCard = ({ item }) => {
         email: user.email,
       };
 
-      fetch("http://localhost:5000/carts", {
+      fetch("https://royal-drawing-school-server-mdjewel999.vercel.app/carts", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -127,7 +127,7 @@ export default ClassCard;
 //         email: user.email,
 //       };
 
-//       fetch("http://localhost:5000/carts", {
+//       fetch("https://royal-drawing-school-server-mdjewel999.vercel.app/carts", {
 //         method: "POST",
 //         headers: {
 //           "content-type": "application/json",

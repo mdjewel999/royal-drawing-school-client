@@ -21,7 +21,7 @@ const MyCart = () => {
     })
     .then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/carts/${item._id}`, {
+        fetch(`https://royal-drawing-school-server-mdjewel999.vercel.app/carts/${item._id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -124,7 +124,7 @@ export default MyCart;
     
 //     .then((result) => {
 //       if (result.isConfirmed) {
-//         fetch(`http://localhost:5000/carts/${item._id}`, {
+//         fetch(`https://royal-drawing-school-server-mdjewel999.vercel.app/carts/${item._id}`, {
 //           method: "DELETE",
 //         })
 //           .then((res) => res.json())
