@@ -18,6 +18,7 @@ import ManageClass from "../Pages/Dashboard/ManageClass/ManageClass";
 import Payment from "../Pages/Dashboard/Payment/Payment";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import InstructorsPage from "../Pages/Home/InstructorsPage/InstructorsPage";
+import PaymentHistory from "../Pages/PaymentHistory/PaymentHistory";
 
  export const router = createBrowserRouter([
     {
@@ -75,6 +76,10 @@ import InstructorsPage from "../Pages/Home/InstructorsPage/InstructorsPage";
           path:'manageClass',
           element:<AdminRoute><ManageClass></ManageClass></AdminRoute>
         },
+        {
+          path:'payHistory',
+          element:<PaymentHistory></PaymentHistory>
+        }
       
       ]
     },

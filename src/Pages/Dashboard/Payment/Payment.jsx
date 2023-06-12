@@ -16,7 +16,7 @@ const Payment = () => {
   const total = cart.reduce((sum, item) => sum + item.price, 0);
   const price = parseFloat(total.toFixed(2));
   return (
-    <div className="bg-yellow-50 w-3/4 px-4 h-full">
+    <div className="bg-yellow-50 w-3/4 px-4 mt-10 h-full">
         <Helmet>
             <title>Payment</title>
         </Helmet>

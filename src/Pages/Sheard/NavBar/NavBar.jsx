@@ -5,14 +5,13 @@ import { AuthContext } from "../../../providers/AuthProvider";
 import { FaShoppingCart } from "react-icons/fa";
 import useCart from "../../../hooks/useCart";
 import useAdmin from "../../../hooks/useAdmin";
-import './ThemeToggle.css'
-
+import "./ThemeToggle.css";
 
 const NavBar = () => {
-const { user, logOut } = useContext(AuthContext);
-const [cart] = useCart()
-const [isAdmin] = useAdmin()
-const [isDarkMode, setIsDarkMode] = useState(false);
+  const { user, logOut } = useContext(AuthContext);
+  const [cart] = useCart();
+  const [isAdmin] = useAdmin();
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const handelLogOut = () => {
     logOut()
       .then(() => {})
@@ -21,32 +20,27 @@ const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     if (isDarkMode) {
-      document.body.classList.add('dark-mode');
+      document.body.classList.add("dark-mode");
     } else {
-      document.body.classList.remove('dark-mode');
+      document.body.classList.remove("dark-mode");
     }
   }, [isDarkMode]);
-
-
 
   const navOption = (
     <>
       <li>
         <Link to="/">Home</Link>
       </li>
-      <li>
-        <Link to="secret">secret</Link>
-      </li>
 
-
-      {
-        isAdmin ? <li>
-        <Link to="/dashboard/allusers">Admin Dashboard</Link>
-      </li> :
-      <li>
-      <Link to="/login">Dashboard</Link>
-    </li>
-      }
+      {isAdmin ? (
+        <li>
+          <Link to="/dashboard/allusers">Admin Dashboard</Link>
+        </li>
+      ) : (
+        <li>
+          <Link to="/login">Dashboard</Link>
+        </li>
+      )}
 
       <li>
         <Link to="/dashboard/mycart">Students Dashboard</Link>
@@ -58,7 +52,7 @@ const [isDarkMode, setIsDarkMode] = useState(false);
         <Link to="InstructorsPage">Instructors Page</Link>
       </li>
 
-     <li>
+      <li>
         <Link to="/dashboard/mycart">
           <button className="btn gap-2">
             <FaShoppingCart></FaShoppingCart>
@@ -67,14 +61,12 @@ const [isDarkMode, setIsDarkMode] = useState(false);
         </Link>
       </li>
 
-      
       {user ? (
         <>
           {/* <span>{user?.displayName}</span> */}
           <button onClick={handelLogOut} className="btn btn-active ">
             LogOut
           </button>
-         
         </>
       ) : (
         <>
@@ -87,7 +79,11 @@ const [isDarkMode, setIsDarkMode] = useState(false);
   );
   return (
     <>
-      <div className={`navbar max-w-screen-xl bg-opacity-30 ${isDarkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
+      <div
+        className={`navbar  max-w-screen-xl bg-opacity-30 ${
+          isDarkMode ? "bg-black text-white" : "bg-white text-black"
+        }`}
+      >
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -108,21 +104,24 @@ const [isDarkMode, setIsDarkMode] = useState(false);
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content  p-2 shadow bg-base-100 rounded-box w-52"
             >
               {navOption}
             </ul>
           </div>
           <div className="flex">
             <img className="w-16 h-16 rounded-full" src={logo} alt="" />
-            <a className="btn btn-ghost normal-case text-xl">Royal Drawing</a>
+            <Link to="/" className="btn btn-ghost normal-case text-xl">Royal Drawing</Link>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navOption}</ul>
         </div>
         <div className="navbar-end">
-        <button className="btn" onClick={() => setIsDarkMode(isDarkMode === '' ? 'dark-mode' : '')}>
+          <button
+            className="btn rounded-full h-6"
+            onClick={() => setIsDarkMode(isDarkMode === "" ? "dark-mode" : "")}
+          >
             Toggle Theme
           </button>
         </div>
@@ -133,9 +132,6 @@ const [isDarkMode, setIsDarkMode] = useState(false);
 
 export default NavBar;
 
-
-
-
 // import { Link } from "react-router-dom";
 // import logo from "../../../assets/logo/logo.jpg";
 // import { useContext, useState } from "react";
@@ -143,7 +139,6 @@ export default NavBar;
 // import { FaShoppingCart } from "react-icons/fa";
 // import useCart from "../../../hooks/useCart";
 // import useAdmin from "../../../hooks/useAdmin";
-
 
 // const NavBar = () => {
 //   const { user, logOut } = useContext(AuthContext);
