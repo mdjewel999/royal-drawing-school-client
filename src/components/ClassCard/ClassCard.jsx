@@ -68,7 +68,7 @@ const ClassCard = ({ item }) => {
         <figure>
           <img className="w-[400px] h-[250px]" src={image} alt="Shoes" />
         </figure>
-        <p className="absolute right-0 mr-4 mt-4 px-4 bg-slate-900 text-white">
+        <p className="absolute right-0 mr-4 mt-4 px-4 bg-yellow-600 rounded-full text-white">
           ${price}
         </p>
         <div className="card-body flex flex-col mx-auto my-auto justify-start">
@@ -79,7 +79,7 @@ const ClassCard = ({ item }) => {
         <div>
           <button
             onClick={handleAddToService}
-            className="btn w-2/3 justify-center btn-primary"
+            className="btn w-2/3 mb-4 justify-center btn-primary"
             disabled={availableSeats === 0}
           >
             My Enrolled Classes

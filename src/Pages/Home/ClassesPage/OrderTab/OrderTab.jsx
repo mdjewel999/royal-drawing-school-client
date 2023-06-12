@@ -13,11 +13,13 @@ const OrderTab = ({ items }) => {
           <ClassCard key={item.id} item={item} />
         ))}
       </div>
-      {items.length > 6 && (
+     <div>
+     {items.length > 6 && (
         <button className="btn btn-primary mt-4 mb-4" onClick={() => setShowAll(!showAll)}>
           {showAll ? "Show Less" : "See All"}
         </button>
       )}
+     </div>
     </div>
   );
 };

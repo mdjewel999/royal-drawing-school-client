@@ -1,15 +1,14 @@
 import logo from "../../../assets/logo/logo.jpg";
 
-import './Footer.css'
-
+import "./Footer.css";
 
 const Footer = () => {
-    return (
-      <div className="mt-4">
-        <footer className="w-full">
+  return (
+    <div className="mt-4">
+      <footer className="w-full">
         <div className="footer p-10 bg-neutral text-neutral-content">
           <div>
-           <img className="rounded-full w-24 h-24" src={logo} alt="" />
+            <img className="rounded-full w-24 h-24" src={logo} alt="" />
             <p className="text-black font-semibold">
               ACME Industries Ltd.
               <br />
@@ -17,11 +16,12 @@ const Footer = () => {
             </p>
           </div>
           <div>
-            <span className="footer-title text-black font-semibold">Social</span>
+            <span className="footer-title text-black font-semibold">
+              Social Link
+            </span>
             <div className="grid grid-flow-col gap-4">
               <a>
                 <svg
-                
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -54,6 +54,29 @@ const Footer = () => {
                 </svg>
               </a>
             </div>
+            <div>
+              <p>
+                Our courses are taught by a drawing faculty of over 75 <br />
+                distinguished practising artists View the faculty
+              </p>
+            </div>
+          </div>
+          <div>
+            <span className="footer-title text-black font-semibold">
+              Contact Us
+            </span>
+            <div className="">
+              <div>
+                <p>Royal Drawing School is a registered charity in</p>
+              </div>{" "}
+              <br />
+              <div>
+                <p>England and Wales (No. 1101538)</p>
+              </div>
+            </div>
+            <div>
+              <p>© Royal Drawing School 2023</p>
+            </div>
           </div>
         </div>
         <div className="footer_bg footer-center p-4 text-black font-bold ">
@@ -62,9 +85,8 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      </div>
-    );
-  };
-  
-  export default Footer;
-  
+    </div>
+  );
+};
+
+export default Footer;
