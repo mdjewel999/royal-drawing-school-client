@@ -111,7 +111,7 @@ const NavBar = () => {
           </div>
           <div className="flex">
             <img className="w-16 h-16 rounded-full" src={logo} alt="" />
-            <Link to="/" className="btn btn-ghost normal-case text-xl">Royal Drawing</Link>
+            <Link to="/" className="btn btn-ghost normal-case text-xl">Online Drawing</Link>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
