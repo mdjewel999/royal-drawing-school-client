@@ -9,10 +9,10 @@ Password: mdjewel1234
 
 ** Live Server_site Link:  https://royal-drawing-school-server-mdjewel999.vercel.app/
 
-** GitHub Client_site Link: https://github.com/programming-hero-web-course1/b712-summer-camp-client-side-mdjewel999
+** GitHub Client_site Link: https://github.com/mdjewel999/royal-drawing-school-client
 
 
-** GitHub Server_site Link: https://github.com/programming-hero-web-course1/b7a12-summer-camp-server_side-mdjewel999
+** GitHub Server_site Link: https://github.com/mdjewel999/royal-drawing-school-server
 
 
 *****Project Details:
