@@ -1,0 +1,16 @@
+.btn-test {
+      background-color: #4cae4c;
+      color: white;
+      width: 20%;
+      padding: 10px 0;
+      border: 0;
+      border-radius:15px;
+    }
+    .btn-test:hover {
+      background-color: #4cae4c;
+    
+      color: black;
+      font-weight: 700;
+      
+      
+    }

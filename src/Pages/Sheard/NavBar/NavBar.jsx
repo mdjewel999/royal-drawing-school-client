@@ -80,12 +80,12 @@ const NavBar = () => {
   return (
     <>
       <div
-        className={`navbar  bg-opacity-30 ${
-          isDarkMode ? "bg-black text-white" : "bg-green-500 text-black"
+        className={`navbar  max-w-screen-xl  mx-auto bg-opacity-40 ${
+          isDarkMode ? "bg-black text-white" : "bg-green-500 text-white"
         }`}
       >
         <div className="navbar-start">
-          <div className="dropdown">
+          <div className="dropdown font-serif">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -109,17 +109,19 @@ const NavBar = () => {
               {navOption}
             </ul>
           </div>
-          <div className="flex">
+          <div className="flex justify-center items-center">
             <img className="w-16 h-16 rounded-full" src={logo} alt="" />
             <Link to="/" className="btn btn-ghost normal-case text-xl">Online Drawing</Link>
           </div>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{navOption}</ul>
+        <div className="navbar-center   hidden lg:flex">
+          <ul className="menu menu-horizontal justify-center font-serif px-1">{navOption}</ul>
         </div>
         <div className="navbar-end">
           <button
-            className="btn rounded-full h-6"
+            className={`border rounded-full p-4 font-serif italic ${
+              isDarkMode ? "bg-green-500 text-white" : "bg-black text-white"
+            }`}
             onClick={() => setIsDarkMode(isDarkMode === "" ? "dark-mode" : "")}
           >
             Toggle Theme
