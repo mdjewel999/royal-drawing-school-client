@@ -1,0 +1,17 @@
+.btn-show {
+      background-color: #4cae4c;
+      color: white;
+      padding: 10px 0;
+      border: 0;
+      width: 20%;
+      border-radius: 15px;
+      
+    }
+.btn-show:hover {
+      background-color: #4cae4c;
+    
+      color: black;
+      font-weight: 700;
+      
+      
+    }

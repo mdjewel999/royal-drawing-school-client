@@ -1,27 +1,36 @@
-import { useState } from 'react';
-import { useSpring, animated } from 'react-spring';
+import "./StudentesClass.css";
+import { useState } from "react";
 
 const StudentesClass = ({ item }) => {
   const { name, instructorName, price, availableSeats, image } = item;
   const [isHovered, setIsHovered] = useState(false);
 
-  const animationProps = useSpring({
-    transform: isHovered ? 'scale(1.1)' : 'scale(1)',
-    config: { tension: 300, friction: 10 },
-  });
-
   return (
-    <div
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <animated.div style={animationProps}>
-        <img className="w-[400px] h-[250px]" src={image} alt="" />
-        <h1>Name: {name}</h1>
-        <p>Instructor Name: {instructorName}</p>
-        <p>Price: $ {price}</p>
-        <p>Available Seats: {availableSeats}</p>
-      </animated.div>
+    <div className="shadow-xl rounded-md p-2 cursor-pointer">
+      <div
+        className="image-container"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <img
+          className={`w-[400px] h-[250px] course-box ${
+            isHovered ? "zoomed" : ""
+          }`}
+          src={image}
+          alt=""
+        />
+      </div>
+      <div className="p-2 font-serif ">
+        <h1 className="text-xl font-bold">
+          <span className="text-xl font-semibold my-2">Name :</span> {name}
+        </h1>
+        <p className="  my-2">Instructor : {instructorName}</p>
+        <p className=" my-2">Price : $ {price}</p>
+        <p className=" my-2">Available Seats : {availableSeats}</p>
+      </div>
+      <div className="items-center">
+        <button className="btn-apply">APPLY NOW</button>
+      </div>
     </div>
   );
 };

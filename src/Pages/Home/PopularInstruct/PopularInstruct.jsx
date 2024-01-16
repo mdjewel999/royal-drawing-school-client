@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 import InstructItem from "../../Sheard/InstructItem/InstructItem";
+import './PopularInstruct.css'
 
 const PopularInstruct = () => {
   const [popularInstruct, setPopularInstruct] = useState([]);
@@ -23,20 +24,20 @@ const PopularInstruct = () => {
         heading={"Popular Instructors"}
         subHeading={"Teaching Online"}
       ></SectionTitle>
-      <div className="grid md:grid-cols-3 gap-4">
+      <div className="grid md:grid-cols-3 gap-6">
         {popularInstruct.slice(0, showAll ? popularInstruct.length : 6).map(item => (
           <InstructItem key={item.id} item={item}></InstructItem>
         ))}
       </div>
       {showAll ? (
         <div className="flex justify-center mt-4">
-          <button className="btn btn-primary" onClick={handleToggleView}>
+          <button className="btn btn-show" onClick={handleToggleView}>
             Show Less
           </button>
         </div>
       ) : (
-        <div className="flex justify-center mt-4">
-          <button className="btn btn-primary" onClick={handleToggleView}>
+        <div className="flex justify-center mt-8">
+          <button className="btn btn-show" onClick={handleToggleView}>
             Show All
           </button>
         </div>

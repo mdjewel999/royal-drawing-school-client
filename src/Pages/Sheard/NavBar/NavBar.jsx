@@ -80,8 +80,8 @@ const NavBar = () => {
   return (
     <>
       <div
-        className={`navbar  max-w-screen-xl bg-opacity-30 ${
-          isDarkMode ? "bg-black text-white" : "bg-white text-black"
+        className={`navbar  bg-opacity-30 ${
+          isDarkMode ? "bg-black text-white" : "bg-green-500 text-black"
         }`}
       >
         <div className="navbar-start">

@@ -13,7 +13,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <HelmetProvider>
       <AuthProvider>
         <QueryClientProvider client={queryClient}>
-          <div className="max-w-screen-xl mx-auto">
+          {/* h-full w-full max-w-[1250px] mx-auto // max-w-screen-xl mx-auto // max-w-7xl mx-auto */}
+          <div className="h-full w-full max-w-[1250px] mx-auto">
             <RouterProvider router={router} />
           </div>
         </QueryClientProvider>
