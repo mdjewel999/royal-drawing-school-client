@@ -5,7 +5,7 @@ mdjewel5578@gmail.com
 Password: mdjewel1234
 
 
-** Live Client_site Link:  https://royal-drawing-school.web.app/
+** Live Client_site Link:  https://65aa732f699ee503e7382b2a--famous-begonia-6f766e.netlify.app/
 
 ** Live Server_site Link:  https://royal-drawing-school-server-mdjewel999.vercel.app/
 
